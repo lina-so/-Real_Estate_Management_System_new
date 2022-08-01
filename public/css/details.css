@@ -1,0 +1,128 @@
+.details-mian{
+    margin-top: 1%;
+}
+.content-body,.content-header
+{
+    display: grid;
+    grid-template-columns: 75% 26%;
+    grid-gap: 20px;
+}
+.images{
+    text-align: center;
+
+}
+/* #carouselExampleControls{
+    width: 60%;
+    height: 30%;
+}*/
+.carousel{
+    box-shadow: 0 10px 45px rgb(255 255 255 / 50%);
+
+}
+.carousel-inner .carousel-item  img{
+    width: 100%;
+    height: 500px;
+} 
+
+.content-header-left h2{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.content-header-left ul.list{
+    list-style: none;
+    display: flex;
+    padding-left: 0em;;
+}
+.content-header-left ul li{
+    margin-right: 1em;
+    padding: 5px;
+
+}
+.content-header-left p.address{
+    text-align: left;
+}
+.description{
+    margin-top: 45px;
+}
+.info{
+    margin-top: 25px;
+}
+.content-header-right{
+    text-align: right;
+}
+.content-header-right span.price{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.content-header-right span.type{
+    background: #e1cf0d;
+    border-radius: 3px;
+    padding: 5px;
+}
+div.content button{
+    border: none;
+    outline: none;
+    background: #16787f;
+    color: #fff;
+    padding: 5px;
+    margin-top: 6px;
+}
+.agent-info{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.agent-info p{
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.agent-info button{
+    outline: none;
+    border: none;
+    background: #16787f;
+    color: #fff;
+    padding: 8px;
+}
+.agent-info h3{
+    letter-spacing: 2px;
+}
+.description h3{
+    margin-top: 20px;
+}
+.description p {
+    text-align: left;
+    width: 76%;
+}
+/* .details table td{
+    text-align: left;
+} */
+.info{
+    display: grid;
+    grid-template-columns: 75% 26%;
+    grid-gap: 20px;
+
+}
+.details table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #fff;
+  }
+.service
+{
+    margin-top: 25px;
+}
+.service table {
+border-collapse: collapse;
+width: 75%;
+border: 1px solid #fff;
+}
+
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+.details tr:nth-child(even){background-color:rgba(255, 255, 255, 0.1);}
+.service tr:nth-child(even){background-color:rgba(255, 255, 255, 0.1);}
