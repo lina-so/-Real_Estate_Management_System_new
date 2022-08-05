@@ -54,9 +54,11 @@
 						<div class="inputBox">
 							<select  name="country">
 						    	<option value="">@lang('lang.Select city')</option>
-								<option value="2">@lang('lang.Harasta')</option>
-								<option value="1">@lang('lang.Doma')</option>
-								<!-- <option value="Sednaya">Sednaya</option> -->
+								@foreach ($cities as $city)
+									<option value="{{ $city->id }}">{{ __('lang.' .  $city->country) }}</option>
+								@endforeach
+								<!-- <option value="2">@lang('lang.Harasta')</option>
+								<option value="1">@lang('lang.Doma')</option> -->
 							</select>
                         </div>
 						<div class="inputBox">

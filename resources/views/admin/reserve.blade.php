@@ -408,7 +408,7 @@
 
       </ul>
     </div>
-    <div class="sidenav-footer mx-3 ">
+    <!-- <div class="sidenav-footer mx-3 ">
       <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
         <div class="full-background" style="background-image: url('../assets/img/curved-images/white-curved.jpeg')"></div>
         <div class="card-body text-start p-3 w-100">
@@ -423,7 +423,7 @@
         </div>
       </div>
       <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree" type="button"></a>
-    </div>
+    </div> -->
   </aside>
  
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
@@ -547,7 +547,7 @@
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Users table</h6>
+              <h6>Reservation Information</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">

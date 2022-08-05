@@ -64,23 +64,22 @@
                 @foreach($real as $real)
                             <div class="container1 item">
                                 <div class="listing-item">
-                                @if ($real->status=="success")
-                            <div class="done">
-                                <img class="done2" src="{{ asset('photo/done4.png') }}" alt="" style="">
-                                <p class="done4">@lang('lang.Sold')</p>
-                                </div>
-                            @else
-                                
-                            @endif
-                            @if ($real->status=="pending")
-                            <div class="done">
-                                <img class="done2" src="{{ asset('photo/done3.png') }}" alt="" style="">
-                                <p>@lang('lang.Reserved')</p>
-                                </div>
-                            @else
-                                
-                            @endif
                                     <div class="left-image">
+                                        
+                    @if ($real->status=="success")
+                   <div class="done">
+                       @lang('lang.Sold')
+                    </div>
+                @else
+                    
+                @endif
+                @if ($real->status=="pending")
+                   <div class="done">
+                       @lang('lang.Reserved')
+                    </div>
+                @else
+                    
+                @endif
                                     <img src="{{asset('images/'.$real->image_path.'/cover.jpg')}}" alt="">
                                     </div>
                                     <div class="right-content align-self-center">

@@ -83,7 +83,7 @@ class SearchController extends Controller
         ->paginate(15);
 
     
-        // dd($real);
+        // dd($request->country);
         return view('resultSearch',compact('real'));
          
     }

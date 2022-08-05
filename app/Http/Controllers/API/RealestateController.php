@@ -44,7 +44,7 @@ class RealestateController extends BaseController
 
     public function show()
     {
-        $reals = Realestate::latest()->paginate(8);
+        $reals = Realestate::latest()->get();
         if (is_null($reals)) {
             return $this->sendError('reals not found!' );
         }

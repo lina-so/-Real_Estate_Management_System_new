@@ -32,7 +32,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{route('dashboard')}}">
                 <img class="logo" src="{{ asset('photo/logo.png') }}" alt="">
                 <p style=" font-size: 13px;">Key In Click</p>
                     <!-- {{ config('app.name', 'Laravel') }} -->

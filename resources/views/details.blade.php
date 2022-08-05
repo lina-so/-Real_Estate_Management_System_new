@@ -259,7 +259,6 @@
                         </div>
 
                       
-                        <!-- <a href="{{url('liked/'.$details[0]->id.'/')}}" class="addToFavoraite"><i class="fa fa-heart" data-product-id="{{$details[0]->id}}"></i>@lang('lang.add to favoraite')</a> -->
                        
                     </div>
                     <div class="agent-info">
@@ -271,9 +270,7 @@
 
                 <div class="description">
                     <h3>@lang('lang.Description')..</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa corrupti 
-                        nostrum explicabo quia cum exercitationem repellendus quae temporibus inventore consequatur quam mollitia,
-                         perferendis debitis neque recusandae dignissimos aut nesciunt.</p>
+                    <p>{{$details[0]->description}}</p>
                 </div>
 
                 <div class="info">

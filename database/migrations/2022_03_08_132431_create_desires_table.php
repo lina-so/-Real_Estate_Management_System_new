@@ -22,9 +22,9 @@ class CreateDesiresTable extends Migration
             $table->double('max_price')->nullable();
             $table->integer('number_of_rooms')->nullable();
             $table->integer('number_of_path_rooms')->nullable();
-            $table->boolean('is_sales')->default(0);
-            $table->boolean('is_rent')->default(0);
-            $table->boolean('is_favoraite')->default(0);
+            // $table->boolean('is_sales')->default(0);
+            // $table->boolean('is_rent')->default(0);
+            // $table->boolean('is_favoraite')->default(0);
             $table->enum('state' , ["sale" , "rent" ])->default('sale');
             $table->enum('type' , ["tabo" , "court" ])->default('tabo');
             $table->enum('property_type', ["villa" , "flat","land","shop" ])->default('flat');

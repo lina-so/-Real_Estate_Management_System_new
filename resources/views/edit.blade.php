@@ -1,6 +1,39 @@
 
 @extends('layouts.app')
 
+@if (Session::get('locale')== "ar")
+        <style>
+          .container_2{
+            direction:rtl;
+          }
+		  .box .sq:nth-child(5){
+			margin-left: -1280px;
+		  }
+        
+		  .box .sq:nth-child(1){
+			margin-right: 1318px;
+		  }
+		  .box .sq:nth-child(2){
+			display: none;
+			
+		  }
+
+		
+        </style>  
+    @else
+        <style>
+             .container_2{
+            direction:ltr;
+            text-align:left;
+          }
+		  .box .sq:nth-child(2){
+			display: none;
+			
+		  }
+
+        </style>
+    @endif
+
 
 @section('content')
 <div class="container">
@@ -26,12 +59,76 @@
                         @method('PUT')
 						<div class="inputBox">
 							<select  name="country">
-								<option value="">Select city</option>
-								
-								@foreach ($cities as $city)
+						    	<option value="">@lang('lang.Select city')</option>
+
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="1" ? 'selected' : ''}}>@lang('lang.Dummar')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="2" ? 'selected' : ''}}>@lang('lang.Paramkeh')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="3" ? 'selected' : ''}}>@lang('lang.Abo Romaneh')</option>
+
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="4" ? 'selected' : ''}}>@lang('lang.Hamrah')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="5" ? 'selected' : ''}}>@lang('lang.Barzeh')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="6" ? 'selected' : ''}}>@lang('lang.Mazeh')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="7" ? 'selected' : ''}}>@lang('lang.Muhajereen')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="8" ? 'selected' : ''}}>@lang('lang.Al-salheya')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="9" ? 'selected' : ''}}>@lang('lang.Rukun Eldin')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="10" ? 'selected' : ''}}>@lang('lang.Kafersouseh')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="11" ? 'selected' : ''}}>@lang('lang.Al-Kanawat')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="12" ? 'selected' : ''}}>@lang('lang.Al-shaghour')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="13" ? 'selected' : ''}}>@lang('lang.Saroujah')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="14" ? 'selected' : ''}}>@lang('lang.Joubar')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="15" ? 'selected' : ''}}>@lang('lang.Al-kaboun')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="16" ? 'selected' : ''}}>@lang('lang.Al-kadam')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="17" ? 'selected' : ''}}>@lang('lang.Al-maydan')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="18" ? 'selected' : ''}}>@lang('lang.Al-yarmouk')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="19" ? 'selected' : ''}}>@lang('lang.Harasta')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="20" ? 'selected' : ''}}>@lang('lang.Doma')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="21" ? 'selected' : ''}}>@lang('lang.zamalka')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="22" ? 'selected' : ''}}>@lang('lang.rankous')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="23" ? 'selected' : ''}}>@lang('lang.yabrod')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="24" ? 'selected' : ''}}>@lang('lang.jaramana')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="25" ? 'selected' : ''}}>@lang('lang.daraya')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="26" ? 'selected' : ''}}>@lang('lang.moadamyeh')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="27" ? 'selected' : ''}}>@lang('lang.Ain Mnin')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="28" ? 'selected' : ''}}>@lang('lang.alhajar alaswad')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="29" ? 'selected' : ''}}>@lang('lang.arabine')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="30" ? 'selected' : ''}}>@lang('lang.ain terma')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="31" ? 'selected' : ''}}>@lang('lang.al-tall')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="32" ? 'selected' : ''}}>@lang('lang.zabadani')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="33" ? 'selected' : ''}}>@lang('lang.mueariban')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="34" ? 'selected' : ''}}>@lang('lang.hush arab')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="35" ? 'selected' : ''}}>@lang('lang.saqba')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="36" ? 'selected' : ''}}>@lang('lang.ain al-fijeh')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="37" ? 'selected' : ''}}>@lang('lang.jadidat ertuz')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="38" ? 'selected' : ''}}>@lang('lang.alsabura')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="39" ? 'selected' : ''}}>@lang('lang.al-qutaifa')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="40" ? 'selected' : ''}}>@lang('lang.jeroud')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="41" ? 'selected' : ''}}>@lang('lang.nabek')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="42" ? 'selected' : ''}}>@lang('lang.qara')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="43" ? 'selected' : ''}}>@lang('lang.babila')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="44" ? 'selected' : ''}}>@lang('lang.kafer batna')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="45" ? 'selected' : ''}}>@lang('lang.hiza')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="46" ? 'selected' : ''}}>@lang('lang.maliha')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="47" ? 'selected' : ''}}>@lang('lang.televita')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="48" ? 'selected' : ''}}>@lang('lang.qatna')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="49" ? 'selected' : ''}}>@lang('lang.saydnaya')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="50" ? 'selected' : ''}}>@lang('lang.hamouria')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="51" ? 'selected' : ''}}>@lang('lang.halboun')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="52" ? 'selected' : ''}}>@lang('lang.eisal alward')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="53" ? 'selected' : ''}}>@lang('lang.yafur')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="54" ? 'selected' : ''}}>@lang('lang.qudsia')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="55" ? 'selected' : ''}}>@lang('lang.alnashabia')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="56" ? 'selected' : ''}}>@lang('lang.jabaden')</option>
+								<option value="{{$real->cities_id}}" {{$real->cities_id =="57" ? 'selected' : ''}}>@lang('lang.alghuzlania')</option>
+
+
+
+
+
+
+								<!-- @foreach ($cities as $city)
 									<option value="{{ $city->id }}">{{ __('lang.' .  $city->country) }}</option>
 								@endforeach
-		
+		 -->
 							</select>
                         </div>
 						<div class="inputBox">
@@ -55,30 +152,34 @@
 
 						<div class="inputBox">
                             <select  name="state">
-                                <option value="Sale">@lang('lang.sale')</option>
-                                <option value="Rent">@lang('lang.rent')</option>
+							<option value="{{$real->state}}" {{$real->state=="Sale" ? 'selected' : ''}}>@lang('lang.sale')</option>
+							<option value="{{$real->state}}" {{$real->state=="Rent" ? 'selected' : ''}}>@lang('lang.rent')</option>
+
                             </select>
                         </div>
                         <div class="inputBox">
                             <select name="type">
-                                <option value="court">@lang('lang.court')</option>
-                                <option value="tabo">@lang('lang.tabo')</option>
+							<option value="{{$real->type}}" {{$real->type=="court" ? 'selected' : ''}}>@lang('lang.court')</option>
+							<option value="{{$real->type}}" {{$real->type=="tabo" ? 'selected' : ''}}>@lang('lang.tabo')</option>
+
+                   
                             </select>
                         </div>
                         <div class="inputBox">
                             <select name="property_type">
-                                <option value="Villa">@lang('lang.villa')</option>
-                                <option value="Flat">@lang('lang.flat')</option>
-                                <option value="Shop">@lang('lang.shop')</option>
-                                <option value="Land">@lang('lang.land')</option>
+							<option value="{{$real->property_type}}" {{$real->property_type=="Villa" ? 'selected' : ''}}>@lang('lang.villa')</option>
+							<option value="{{$real->property_type}}" {{$real->property_type=="Flat" ? 'selected' : ''}}>@lang('lang.flat')</option>
+							<option value="{{$real->property_type}}" {{$real->property_type=="Shop" ? 'selected' : ''}}>@lang('lang.shop')</option>
+							<option value="{{$real->property_type}}" {{$real->property_type=="Land" ? 'selected' : ''}}>@lang('lang.land')</option>
+
                             </select>
                         </div>
 
 						<div class="inputBox">
                             <select name="furnished">
-						     	<!-- <option value="" selected disabled>@lang('lang.furnished')</option> -->
-                                <option value="furnished">@lang('lang.furnished')</option>
-                                <option value="not_furnished">@lang('lang.not_furnished')</option>
+							<option value="{{$real->furnished}}" {{$real->furnished=="furnished" ? 'selected' : ''}}>@lang('lang.furnished')</option>
+							<option value="{{$real->furnished}}" {{$real->furnished=="not_furnished" ? 'selected' : ''}}>@lang('lang.not_furnished')</option>
+
                             </select>
                         </div>
 
@@ -109,7 +210,7 @@
 
 						<div class="inputBox">
 							<label for="description">@lang('lang.Description')</label>
-							<textarea type="text" class="form-control" name="description" value=""></textarea>
+							<textarea type="text" class="form-control" name="description" value="">{{$real->description}}</textarea>
 						</div>
 
 						<div class="save save_1">
