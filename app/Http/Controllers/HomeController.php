@@ -62,4 +62,16 @@ class HomeController extends Controller
 
 
         }
+
+        public function sale()
+        {
+    
+        $Date = Realestate::all();
+
+        $sale=DB::select('select count(*)  from realestates  where state="sale"'); 
+        $rent=DB::select('select count(*)  from realestates  where state="rent"'); 
+
+        return response()->json($sale)->json($rent);
+        }
+    
 }

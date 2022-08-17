@@ -132,41 +132,34 @@ class RealestateController extends Controller
                
         $real->save();
 
-        // $reserve= new Reserve;
-        // if($reserve->is_reserve=1)
-        // {
-        //    $real->end_r_date=$reserve->created_at->addDays('4')->format('d-m-Y');
-        // }
-        // $real->end_r_date;
 
 
 
         // zena
 
-        $desire = Desire::
-        select('users.email as email','desires.floor as floor' ,'desires.max_price','desires.number_of_rooms','desires.cities_id','cities.country as city')
-        ->join('users','users.id','=','desires.user_id')
-        ->join('cities','cities.id','=','desires.cities_id')
-        ->where('floor','=',$request->floor)
-        ->orwhere('max_price','>',$request->price)
-        ->orwhere('number_of_rooms','=',$request->number_of_rooms)
-        ->orwhere('cities_id','=',$request->cities_id)
+        // $desire = Desire::
+        // select('users.email as email','desires.floor as floor' ,'desires.max_price','desires.number_of_rooms','desires.cities_id','cities.country as city')
+        // ->join('users','users.id','=','desires.user_id')
+        // ->join('cities','cities.id','=','desires.cities_id')
+        // ->where('floor','=',$request->floor)
+        // ->orwhere('max_price','>',$request->price)
+        // ->orwhere('number_of_rooms','=',$request->number_of_rooms)
+        // ->orwhere('cities_id','=',$request->cities_id)
 
-        ->get();
+        // ->get();
 
-        // dd($desire);
 
-        foreach($desire as $des ){
+        // foreach($desire as $des ){
 
-            $details = [
-                'title' => 'desire email ',
-                'body' => 'Your Desire Is Availeble With Floor: '.$request->floor ." ".',  Pice Is: '.$request->price 
-                          ." ".',  Number Of Rooms Is: '.$request->number_of_rooms ." ".'And City Is: '.$des->city 
-            ];
+        //     $details = [
+        //         'title' => 'desire email ',
+        //         'body' => 'Your Desire Is Availeble With Floor: '.$request->floor ." ".',  Pice Is: '.$request->price 
+        //                   ." ".',  Number Of Rooms Is: '.$request->number_of_rooms ." ".'And City Is: '.$des->city 
+        //     ];
            
-            Mail::to($des->email)->send(new \App\Mail\AttachmentMail($details));
+        //     Mail::to($des->email)->send(new \App\Mail\AttachmentMail($details));
 
-        }
+        // }
 // end zena
         return redirect()->route('show');
 

@@ -151,7 +151,7 @@
             <div class="no-result">
                  <h1 >@lang('lang.Not-found')</h1>
                  <p>@lang('lang.no-result')</p>
-                 <a href="/desire" class="details" style="color:gray" >@lang('lang.add desire')</a>
+                 <a href="{{route('Add-desire')}}" class="details" style="color:gray" >@lang('lang.add desire')</a>
 
             </div>
              @endsection

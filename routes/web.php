@@ -168,5 +168,9 @@ Route::get('send-mail', function () {
 });
 
 
+//chart
+Route::get("sale/chart", [App\Http\Controllers\HomeController::class, 'sale']);
+
+
 
 

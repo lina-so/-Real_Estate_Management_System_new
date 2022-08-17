@@ -100,9 +100,9 @@
                                 </button>
                             </div>
                         </div>
-						<!-- <p class="forget">
-							Already have an account ? <a href="#">Sign in</a>
-						</p> -->
+						<p class="forget">
+							Already have an account ? <a href="/login">Login</a>
+						</p>
 						
 					</form>
 				</div>
